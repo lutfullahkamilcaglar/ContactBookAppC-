@@ -21,8 +21,11 @@ public static class Resources
     // listOptions
     public const string OptionListing = "Welcome. Please make a chose." +
                                   "\nYour options:" +
-                                  "\nOption 1" +
-                                  "\nOption 2" +
-                                  "\nOption 3";
-
+                                  "\n1.List all contacts." +
+                                  "\n2.Create new contact." +
+                                  "\n3.Delete contact" +
+                                  "\n4.Display birthdays in current week." +
+                                  "\n5.Logged Out";
+    
+    // TODO add other inputs
 }

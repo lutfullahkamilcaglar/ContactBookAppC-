@@ -5,7 +5,7 @@ public class Options
     private readonly INputManager _inputManager;
 
     private readonly IUserManager _userManager;
-    
+
     private readonly List<People> peoples = new();
 
     public Options(INputManager inputManager, IUserManager userManager)
@@ -34,16 +34,16 @@ public class Options
         switch (selection)
         {
             case 1:
-                Console.WriteLine("Method1");
+                ListAllContacts();
                 break;
             case 2:
-                Console.WriteLine("Method2");
+                CreateContact();
                 break;
             case 3:
-                Console.WriteLine("Method3");
+                DeleteContact();
                 break;
             case 4:
-                Console.WriteLine("Method4");
+                DisplayBirthDates();
                 break;
             case 5:
                 isLoggedOut = true;
@@ -55,7 +55,44 @@ public class Options
         }
         return isLoggedOut;
     }
-    
+
+    void ListAllContacts()
+    {
+        foreach (var people in peoples)
+        {
+            people.ListPersonInfo();
+        }
+    }
+
+    void CreateContact()
+    {
+        var personName = _inputManager.GetStringWithDescription("Enter Name: ");
+        var personSurname = _inputManager.GetStringWithDescription("Enter Surname: ");
+        var email = _inputManager.GetStringWithDescription("Enter Email");
+        var phoneNumber = _inputManager.GetIntWithDescription("Enter Phone number: ");
+        var dateOfBirth = _inputManager.GetStringWithDescription("Enter Date of birth.");
+        var newContact = new People(personName, personSurname, email, phoneNumber, dateOfBirth);
+        peoples.Add(newContact);
+        newContact.ListPersonInfo();
+    }
+
+    void DeleteContact()
+    {
+        var personId = _inputManager.GetIntWithDescription("Enter contact id to delete");
+        foreach (var people in peoples)
+        {
+            if (personId == people.getId())
+            {
+                peoples.Remove(people);
+            }
+            Console.WriteLine($"Contact ID: {personId} has been deleted!");
+        }
+    }
+
+    void DisplayBirthDates()
+    {
+        
+    }
     
     
 }
