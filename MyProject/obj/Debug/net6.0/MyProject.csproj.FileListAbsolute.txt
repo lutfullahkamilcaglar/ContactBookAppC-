@@ -1,0 +1,15 @@
+/Users/kamilcaglar/RiderProjects/MyProject/MyProject/bin/Debug/net6.0/MyProject
+/Users/kamilcaglar/RiderProjects/MyProject/MyProject/bin/Debug/net6.0/MyProject.deps.json
+/Users/kamilcaglar/RiderProjects/MyProject/MyProject/bin/Debug/net6.0/MyProject.runtimeconfig.json
+/Users/kamilcaglar/RiderProjects/MyProject/MyProject/bin/Debug/net6.0/MyProject.dll
+/Users/kamilcaglar/RiderProjects/MyProject/MyProject/bin/Debug/net6.0/MyProject.pdb
+/Users/kamilcaglar/RiderProjects/MyProject/MyProject/obj/Debug/net6.0/MyProject.csproj.AssemblyReference.cache
+/Users/kamilcaglar/RiderProjects/MyProject/MyProject/obj/Debug/net6.0/MyProject.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kamilcaglar/RiderProjects/MyProject/MyProject/obj/Debug/net6.0/MyProject.AssemblyInfoInputs.cache
+/Users/kamilcaglar/RiderProjects/MyProject/MyProject/obj/Debug/net6.0/MyProject.AssemblyInfo.cs
+/Users/kamilcaglar/RiderProjects/MyProject/MyProject/obj/Debug/net6.0/MyProject.csproj.CoreCompileInputs.cache
+/Users/kamilcaglar/RiderProjects/MyProject/MyProject/obj/Debug/net6.0/MyProject.dll
+/Users/kamilcaglar/RiderProjects/MyProject/MyProject/obj/Debug/net6.0/refint/MyProject.dll
+/Users/kamilcaglar/RiderProjects/MyProject/MyProject/obj/Debug/net6.0/MyProject.pdb
+/Users/kamilcaglar/RiderProjects/MyProject/MyProject/obj/Debug/net6.0/MyProject.genruntimeconfig.cache
+/Users/kamilcaglar/RiderProjects/MyProject/MyProject/obj/Debug/net6.0/ref/MyProject.dll
