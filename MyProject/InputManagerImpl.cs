@@ -23,6 +23,13 @@ namespace MyProject
         return Console.ReadLine();
     }
 
+    public DateTime DateTime(string birthDate)
+    {
+        Console.WriteLine(birthDate);
+        return Convert.ToDateTime(Console.ReadLine());
+    }
+
+
     public int GetIntWithDescription(string message)
     {
         Console.WriteLine(message);

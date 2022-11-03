@@ -6,7 +6,7 @@ public class Options
 
     private readonly IUserManager _userManager;
 
-    private readonly List<People> peoples = new();
+    private readonly List<People> _peopleList = new();
 
     public Options(INputManager inputManager, IUserManager userManager)
     {
@@ -27,7 +27,7 @@ public class Options
     }
 
     private bool ListOptions()
-    { 
+    {
         int selection = _inputManager.GetIntWithDescription(Resources.OptionListing);
         bool isLoggedOut = false;
 
@@ -53,12 +53,13 @@ public class Options
                 Console.WriteLine("There is no such option.");
                 break;
         }
+
         return isLoggedOut;
     }
 
     void ListAllContacts()
     {
-        foreach (var people in peoples)
+        foreach (var people in _peopleList)
         {
             people.ListPersonInfo();
         }
@@ -70,31 +71,56 @@ public class Options
         var personSurname = _inputManager.GetStringWithDescription("Enter Surname: ");
         var email = _inputManager.GetStringWithDescription("Enter Email");
         var phoneNumber = _inputManager.GetIntWithDescription("Enter Phone number: ");
-        var dateOfBirth = _inputManager.GetStringWithDescription("Enter Date of birth.");
+        var dateOfBirth = _inputManager.DateTime("Enter Date of birth. With this format dd/mm/yyyy");
         var newContact = new People(personName, personSurname, email, phoneNumber, dateOfBirth);
-        peoples.Add(newContact);
+        _peopleList.Add(newContact);
         newContact.ListPersonInfo();
     }
 
     void DeleteContact()
     {
         var personId = _inputManager.GetIntWithDescription("Enter contact id to delete");
-        foreach (var people in peoples)
+        List<People> deleteList = new();
+
+        foreach (var people in _peopleList)
         {
-            if (personId == people.getId())
+            if (personId == people.GetId())
             {
-                peoples.Remove(people);
+                deleteList.Add(people);
+                // _peopleList.Remove(people);
+                // Console.WriteLine($"Contact ID: {personId} has been deleted!");
+                // break;
             }
+        }
+
+        foreach (var people in deleteList)
+        {
+            _peopleList.Remove(people);
             Console.WriteLine($"Contact ID: {personId} has been deleted!");
         }
     }
 
     void DisplayBirthDates()
     {
+
+        var annen = _inputManager.DateTime("Date of birth type");
         
+        Console.WriteLine(annen);
+
+        // DateTime birthDay = DateTime.Now;
+        // var today = DateTime.Today;
+        //
+        // bool IsBirthWeek(DateTime payDate, DateTime birthDate)
+        // {
+        //     DateTime dtStart = payDate.AddDays(-6);
+        //     DateTime dtEnd = payDate;
+        //     int dayStart = dtStart.DayOfYear;
+        //     int dayEnd = dtEnd.DayOfYear;
+        //     int birthDayY = birthDate.DayOfYear;
+        //     return (birthDayY >= dayStart && birthDayY < dayEnd);
+        // }
+        // Console.WriteLine(IsBirthWeek(today, birthDay));
     }
-    
-    
 }
 
 

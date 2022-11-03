@@ -9,8 +9,13 @@ public interface INputManager
     string GetString();
 
     string GetStringWithDescription(string message);
-    
-    
+
+   // public DateTime Date { get; }
+
+    public DateTime DateTime(string birthDate);
+
+
+
 
 
 

@@ -35,7 +35,7 @@ public class Controller
     private bool LoginSection()
     {
         var selection = _inputManager.GetIntWithDescription(Resources.LoginListing);
-
+       
         switch (selection)
         {
             case 1:

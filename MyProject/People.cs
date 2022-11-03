@@ -6,20 +6,21 @@ public class People
     private readonly string name;
     private readonly string surname;
     private readonly string email;
-    private readonly string dateOfBirth;
+    private readonly DateTime dateOfBirth;
     private readonly int phoneNumber;
 
-    public int getId()
+    public int GetId()
     {
         return id;
     }
 
-    public People(string name, string surname, string email, int phoneNumber, string dateOfBirth)
+    public People(string name, string surname, string email, int phoneNumber, DateTime dateOfBirth)
     {
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.phoneNumber = phoneNumber;
+        this.dateOfBirth = dateOfBirth;
         id = GenerateId();
     }
 
@@ -30,6 +31,7 @@ public class People
                                     ("Name: ",name) +
                                     ("Surname: ",surname) +
                                     ("Email: ",email) +
+                                    ("Date of birth:", dateOfBirth)+
                                     ("Phone Number: ",phoneNumber));
         Console.WriteLine(info);
     }
