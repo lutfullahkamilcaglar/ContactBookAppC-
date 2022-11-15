@@ -46,6 +46,9 @@ public class Options
                 DisplayBirthDates();
                 break;
             case 5:
+                EditContact();
+                break;
+            case 6:
                 isLoggedOut = true;
                 Console.WriteLine("Logged Out");
                 break;
@@ -100,13 +103,27 @@ public class Options
         }
     }
 
+    void EditContact()
+    {
+        var editId = _inputManager.GetIntWithDescription("Enter id to edit contact");
+
+        foreach (var people in _peopleList)
+        {
+            if (editId == people.GetId())
+            {
+                _peopleList.Remove(people);
+                Console.WriteLine("Enter contact information.");
+                CreateContact();
+                Console.WriteLine("Contact has been updated.");
+                break;
+            }
+        }
+
+
+
+    }
     void DisplayBirthDates()
     {
-
-        var annen = _inputManager.DateTime("Date of birth type");
-        
-        Console.WriteLine(annen);
-
         // DateTime birthDay = DateTime.Now;
         // var today = DateTime.Today;
         //

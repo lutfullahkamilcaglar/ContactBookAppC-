@@ -25,7 +25,8 @@ public static class Resources
                                   "\n2.Create new contact." +
                                   "\n3.Delete contact" +
                                   "\n4.Display birthdays in current week." +
-                                  "\n5.Logged Out";
+                                  "\n5.Edit contact" +
+                                  "\n6.Logged Out";
     
     // TODO add other inputs
 }
