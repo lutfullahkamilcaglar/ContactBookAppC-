@@ -1,6 +1,6 @@
-namespace MyProject;
+namespace MyProject.infrastructure;
 
-public interface INputManager
+public interface IInputManager
 {
     int GetInt();
 
@@ -13,10 +13,5 @@ public interface INputManager
    // public DateTime Date { get; }
 
     public DateTime DateTime(string birthDate);
-
-
-
-
-
 
 }
