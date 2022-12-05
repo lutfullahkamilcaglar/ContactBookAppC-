@@ -13,3 +13,20 @@
 /Users/kamilcaglar/RiderProjects/MyProject/MyProject/obj/Debug/net6.0/MyProject.pdb
 /Users/kamilcaglar/RiderProjects/MyProject/MyProject/obj/Debug/net6.0/MyProject.genruntimeconfig.cache
 /Users/kamilcaglar/RiderProjects/MyProject/MyProject/obj/Debug/net6.0/ref/MyProject.dll
+/Users/kamilcaglar/Desktop/C# Project /MyProject/MyProject/bin/Debug/net6.0/MyProject
+/Users/kamilcaglar/Desktop/C# Project /MyProject/MyProject/bin/Debug/net6.0/MyProject.deps.json
+/Users/kamilcaglar/Desktop/C# Project /MyProject/MyProject/bin/Debug/net6.0/MyProject.runtimeconfig.json
+/Users/kamilcaglar/Desktop/C# Project /MyProject/MyProject/bin/Debug/net6.0/MyProject.dll
+/Users/kamilcaglar/Desktop/C# Project /MyProject/MyProject/bin/Debug/net6.0/MyProject.pdb
+/Users/kamilcaglar/Desktop/C# Project /MyProject/MyProject/obj/Debug/net6.0/MyProject.csproj.AssemblyReference.cache
+/Users/kamilcaglar/Desktop/C# Project /MyProject/MyProject/obj/Debug/net6.0/MyProject.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kamilcaglar/Desktop/C# Project /MyProject/MyProject/obj/Debug/net6.0/MyProject.AssemblyInfoInputs.cache
+/Users/kamilcaglar/Desktop/C# Project /MyProject/MyProject/obj/Debug/net6.0/MyProject.AssemblyInfo.cs
+/Users/kamilcaglar/Desktop/C# Project /MyProject/MyProject/obj/Debug/net6.0/MyProject.csproj.CoreCompileInputs.cache
+/Users/kamilcaglar/Desktop/C# Project /MyProject/MyProject/obj/Debug/net6.0/MyProject.dll
+/Users/kamilcaglar/Desktop/C# Project /MyProject/MyProject/obj/Debug/net6.0/refint/MyProject.dll
+/Users/kamilcaglar/Desktop/C# Project /MyProject/MyProject/obj/Debug/net6.0/MyProject.pdb
+/Users/kamilcaglar/Desktop/C# Project /MyProject/MyProject/obj/Debug/net6.0/MyProject.genruntimeconfig.cache
+/Users/kamilcaglar/Desktop/C# Project /MyProject/MyProject/obj/Debug/net6.0/ref/MyProject.dll
+/Users/kamilcaglar/Desktop/C# Project /MyProject/MyProject/bin/Debug/net6.0/Newtonsoft.Json.dll
+/Users/kamilcaglar/Desktop/C# Project /MyProject/MyProject/obj/Debug/net6.0/MyProject.csproj.CopyComplete

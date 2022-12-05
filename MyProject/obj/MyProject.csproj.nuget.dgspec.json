@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/kamilcaglar/RiderProjects/MyProject/MyProject/MyProject.csproj": {}
+    "/Users/kamilcaglar/Desktop/C# Project /MyProject/MyProject/MyProject.csproj": {}
   },
   "projects": {
-    "/Users/kamilcaglar/RiderProjects/MyProject/MyProject/MyProject.csproj": {
+    "/Users/kamilcaglar/Desktop/C# Project /MyProject/MyProject/MyProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kamilcaglar/RiderProjects/MyProject/MyProject/MyProject.csproj",
+        "projectUniqueName": "/Users/kamilcaglar/Desktop/C# Project /MyProject/MyProject/MyProject.csproj",
         "projectName": "MyProject",
-        "projectPath": "/Users/kamilcaglar/RiderProjects/MyProject/MyProject/MyProject.csproj",
+        "projectPath": "/Users/kamilcaglar/Desktop/C# Project /MyProject/MyProject/MyProject.csproj",
         "packagesPath": "/Users/kamilcaglar/.nuget/packages/",
-        "outputPath": "/Users/kamilcaglar/RiderProjects/MyProject/MyProject/obj/",
+        "outputPath": "/Users/kamilcaglar/Desktop/C# Project /MyProject/MyProject/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/kamilcaglar/.nuget/NuGet/NuGet.Config"
@@ -37,6 +37,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

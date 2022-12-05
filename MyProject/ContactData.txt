@@ -1,0 +1,1 @@
+[{"Id":454,"Name":"Kamil","Surname":"caglar","Email":"alarkamil34@gmail.com","DateOfBirth":"1998-05-08T00:00:00","PhoneNumber":534423421},{"Id":963,"Name":"Lutfullah kamil","Surname":"caglar","Email":"lkcaglar@gmail.com","DateOfBirth":"2000-12-08T00:00:00","PhoneNumber":534425237}]

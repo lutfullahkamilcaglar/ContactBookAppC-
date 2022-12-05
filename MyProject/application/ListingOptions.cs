@@ -34,7 +34,7 @@ public class ListingOptions
         switch (selection)
         {
             case 1:
-                _options.ListAllContacts();
+                Options.ListAllContacts();
                 break;
             case 2:
                 _options.CreateContact();
@@ -43,7 +43,7 @@ public class ListingOptions
                 _options.DeleteContact();
                 break;
             case 4:
-                _options.DisplayBirthDates();
+                Options.DisplayBirthDates();
                 break;
             case 5:
                 _options.EditContact();
@@ -52,6 +52,9 @@ public class ListingOptions
                 _options.SearchContact();
                 break;
             case 7:
+                
+                break;
+            case 8:
                 Options.ExitSelection(out exitSelection);
                 break;
             default:

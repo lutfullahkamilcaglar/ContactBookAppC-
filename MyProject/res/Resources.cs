@@ -12,7 +12,8 @@ public static class Resources
                                   "\n4.Display birthdays in current week." +
                                   "\n5.Edit contact" +
                                   "\n6.Search contact" +
-                                  "\n7.Exit ";
+                                  "\n7.Save" +
+                                  "\n8.Exit ";
 
     public const string Contacts = "Contacts: ";
     public const string Id = "Id: ";
@@ -33,7 +34,7 @@ public static class Resources
     public const string EnterName = "Enter Name: ";
     public const string EnterSurname = "Enter Surname: ";
     public const string EnterEmail = "Enter Email";
-    public const string EnterPhoneNumber = "Enter Phone number: ";
+    public const string EnterPhoneNumber = "Enter Phone number(only numbers will be validated.): ";
     public const string EnterDateOfBirth = "Enter Date of birth. With this format dd/mm/yyyy";
     
     

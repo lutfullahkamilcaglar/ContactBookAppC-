@@ -1,22 +1,22 @@
 using MyProject.infrastructure;
 using MyProject.model;
 using MyProject.res;
-
+using System.Net.Mail;
 namespace MyProject.application;
 
 public class Options
 {
     private readonly IInputManager _inputManager;
-    private readonly List<People> _peopleList = new();
 
+    private static List<People> PeopleList => FileManager.ReadPeopleFile();
     public Options(IInputManager inputManager)
     {
         _inputManager = inputManager;
     }
 
-    public void ListAllContacts()
+    public static void ListAllContacts()
     {
-        foreach (var people in _peopleList)
+        foreach (var people in PeopleList)
         {
             people.ListPersonInfo();
         }
@@ -25,7 +25,7 @@ public class Options
     public void SearchContact()
     {
         var searchId = _inputManager.GetIntWithDescription(Resources.EnterContactId);
-        var searchContact = _peopleList.FirstOrDefault(people => searchId == people.GetId());
+        var searchContact = PeopleList.FirstOrDefault(people => searchId == people.GetId());
 
         if (searchContact != null)
         {
@@ -36,41 +36,32 @@ public class Options
             Console.WriteLine(Resources.NoMatchIdError);
         }
     }
-
+    
     public void CreateContact()
     {
         var personName = _inputManager.GetStringWithDescription(Resources.EnterName);
-        var personSurname = _inputManager.GetStringWithDescription(Resources.EnterSurname);
-        var email = _inputManager.GetStringWithDescription(Resources.EnterEmail);
-        var phoneNumber = _inputManager.GetIntWithDescription(Resources.EnterPhoneNumber);
-        var dateOfBirth = _inputManager.DateTime(Resources.EnterDateOfBirth);
-        
-        var newContact = new People(personName, personSurname, email, phoneNumber, dateOfBirth);
-        _peopleList.Add(newContact);
-        newContact.ListPersonInfo();
+         var personSurname = _inputManager.GetStringWithDescription(Resources.EnterSurname);
+         var email = _inputManager.GetValidEmailAddress(Resources.EnterEmail);
+         var phoneNumber = _inputManager.GetPhoneNumberWithDescription(Resources.EnterPhoneNumber);
+         var dateOfBirth = _inputManager.DateTime(Resources.EnterDateOfBirth);
+         var newContact = new People(personName, personSurname, email, phoneNumber, dateOfBirth);
+         FileManager.SavePeopleToFile(newContact);
+         newContact.ListPersonInfo();
     }
 
     public void DeleteContact()
     {
         var personId = _inputManager.GetIntWithDescription(Resources.DeleteId);
-        List<People> deleteList = new();
+        var deleteContact = PeopleList.FirstOrDefault(people => personId == people.GetId());
 
-        
-        foreach (var people in _peopleList)
+
+        if (deleteContact == null)
         {
-            if (personId == people.GetId())
-            {
-                deleteList.Add(people);
-            }
-            else
-            {
-                Console.WriteLine(Resources.NoMatchIdError);
-            }
+            Console.WriteLine(Resources.NoMatchIdError);
         }
-
-        foreach (var people in deleteList)
+        else
         {
-            _peopleList.Remove(people);
+            FileManager.RemovePeopleFromFile(deleteContact);
             Console.WriteLine(Resources.ContactDelete, personId);
         }
     }
@@ -79,11 +70,11 @@ public class Options
     {
         var editId = _inputManager.GetIntWithDescription(Resources.EnterContactId);
 
-        var contact = _peopleList.FirstOrDefault(people => editId == people.GetId());
+        var contact = PeopleList.FirstOrDefault(people => editId == people.GetId());
 
         if (contact != null)
         {
-            _peopleList.Remove(contact);
+            FileManager.RemovePeopleFromFile(contact);
             Console.WriteLine(Resources.EnterContactInformation);
             CreateContact();
             Console.WriteLine(Resources.ContactHasBeenUpdated);
@@ -94,9 +85,9 @@ public class Options
         }
     }
 
-    public void DisplayBirthDates()
+    public static void DisplayBirthDates()
     {
-        var contacts = _peopleList.Where(CheckBirthDate);
+        var contacts = PeopleList.Where(CheckBirthDate);
 
         foreach (var contact in contacts)
         {

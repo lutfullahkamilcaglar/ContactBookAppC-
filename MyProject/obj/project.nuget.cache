@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/ubcSWMllvZHkqbCKpFKycAX64/l0z9h6Vx3dbby0acY6awWbyOOsMbF5p2r3otr6IdKJ0SMvgNsemb+MVG37w==",
+  "dgSpecHash": "e9MGJNz4QzEInDHiuEJZZxKSpDD9KxbARfFX0OuWsyUurrEXHx+doJHk+26WXVa/pdcWKFAZ3Mt6i3kp4Pa8/w==",
   "success": true,
-  "projectFilePath": "/Users/kamilcaglar/RiderProjects/MyProject/MyProject/MyProject.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/Users/kamilcaglar/Desktop/C# Project /MyProject/MyProject/MyProject.csproj",
+  "expectedPackageFiles": [
+    "/Users/kamilcaglar/.nuget/packages/newtonsoft.json/13.0.2/newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
